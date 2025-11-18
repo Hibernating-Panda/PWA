@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  height: fit-content;
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  opacity: 0.7;
+}
+
+.search-box {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+input, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #2196F3;
+  color: #fff;
+  cursor: pointer;
+}
+
+.weather-card {
+  background: rgba(255,255,255,0.85);
+  color: #000;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+}
+
+body.clear {
+  background: linear-gradient(to bottom, #4facfe, #00f2fe); /* sunny blue */
+}
+
+body.clouds {
+  background: linear-gradient(to bottom, #757f9a, #d7dde8); /* cloudy gray */
+}
+
+body.rain {
+  background: linear-gradient(to bottom, #4e4376, #2b5876); /* rainy dark blue */
+}
+
+body.drizzle {
+  background: linear-gradient(to bottom, #74ebd5, #ACB6E5); /* light rain */
+}
+
+body.thunderstorm {
+  background: linear-gradient(to bottom, #283048, #859398); /* stormy */
+}
+
+body.snow {
+  background: linear-gradient(to bottom, #e0eafc, #cfdef3); /* snowy white */
+}
+
+body.atmosphere {
+  background: linear-gradient(to bottom, #bdc3c7, #2c3e50); /* fog/mist */
+}
+
+body.default-bg {
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+}
+
+/* Fullscreen background video */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* Keep your weather card visible */
+.weather-card, h1, .search-box {
+  position: relative;
+  z-index: 5;
+}

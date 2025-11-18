@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA Weather Demo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <video id="bgVideo" autoplay muted loop playsinline></video>
+  
+  <h1 class="title">🌤 Weather PWA Demo 🚀</h1>
+
+  <div class="search-box">
+    <input 
+      list="cityList"
+      type="text" 
+      id="cityInput" 
+      placeholder="Search city..."
+    >
+    <datalist id="cityList"></datalist>
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div class="weather-card" id="weather">
+    <p class="loading">Enter a city to begin...</p>
+  </div>
+
+  <script src="app.js"></script>
+  
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registered"))
+        .catch(err => console.error("SW registration failed:", err));
+    }
+  </script>
+
+</body>
+</html>
