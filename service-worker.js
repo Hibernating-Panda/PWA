@@ -1,10 +1,13 @@
-const CACHE = "weather-static-v4";
+const CACHE = "weather-static-v5";
 const ASSETS = [
   "./",
   "index.html",
   "app.js",
   "style.css",
-  "icon.png"
+  "manifest.json",
+  "icons/icon-192.png",
+  "icons/icon-512.png",
+  "icons/icon-1024.png"
 ];
 
 self.addEventListener("install", event => {

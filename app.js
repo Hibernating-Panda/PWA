@@ -50,14 +50,24 @@ async function fetchWeather(city) {
 
 function renderWeather(data, offline = false) {
   weatherDiv.innerHTML = `
-    <h2>${data.name}, ${data.sys.country}</h2>
-    <p>🌡️ Temp: ${data.main.temp.toFixed(1)}°C</p>
-    <p>🤔 Feels like: ${data.main.feels_like.toFixed(1)}°C</p>
-    <p>🌥️ Weather: ${data.weather[0].description}</p>
-    <p>💧 Humidity: ${data.main.humidity}%</p>
-    <p>💨 Wind: ${data.wind.speed} m/s</p>
-    ${offline ? "<p style='color:red'>Offline (cached)</p>" : ""}
-  `;
+  <h2 class="city-title">${data.name}, ${data.sys.country}</h2>
+
+  <div class="top-temp">
+    <span class="temp">${data.main.temp.toFixed(1)}°C</span>
+    <span class="feels">Feels like: ${data.main.feels_like.toFixed(1)}°C</span>
+  </div>
+
+  <div class="weather-grid">
+    <div><strong>Condition:</strong> ${data.weather[0].description}</div>
+    <div><strong>Humidity:</strong> ${data.main.humidity}%</div>
+
+    <div><strong>Wind:</strong> ${data.wind.speed} m/s</div>
+    <div><strong>Pressure:</strong> ${data.main.pressure} hPa</div>
+  </div>
+
+  ${offline ? "<p class='offline'>Offline (cached)</p>" : ""}
+`;
+
 
   const weatherType = data.weather[0].main.toLowerCase(); 
 

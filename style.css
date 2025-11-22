@@ -96,3 +96,50 @@ body.default-bg {
   position: relative;
   z-index: 5;
 }
+
+/* Title */
+.city-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Temp at the top */
+.top-temp {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.temp {
+  font-size: 48px;
+  font-weight: bold;
+  display: block;
+}
+
+.feels {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Grid layout */
+.weather-grid {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  text-align: left;
+}
+
+.weather-grid div {
+  background: rgba(255,255,255,0.6);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* Offline label */
+.offline {
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
+}
